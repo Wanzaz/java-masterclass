@@ -9,6 +9,7 @@ public class PositiveNegativeZero {
         }
 
         System.out.println("The number is " + stringNumber);
+        // System.out.println((number > 0) ? "positive" : ((number < 0) ? "negative" : "zero"));
     }
 
     public static void main(String[] args) {
