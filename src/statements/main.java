@@ -10,15 +10,17 @@ public class main {
         }
     }
 
-    public static int calculateScoreReturned(boolean gameOver, int score, int levelCompleted, int bonus) {
+    public static int calculateScore(int score, int levelCompleted, int bonus) {
 
         int finalScore = score;
-        if (gameOver) {
-            finalScore += (levelCompleted * bonus);
-        }
+        finalScore += (levelCompleted * bonus);
 
         return finalScore;
     }
+
+    // Method Overloading
+    // - method can have the same name but different nums of parameters and types
+    //      - and it will be still unique method
 
     public static void main(String[] args) {
 
@@ -38,7 +40,7 @@ public class main {
 
         calculateScore(gameOver, score, levelCompleted, bonus);
         calculateScore(true, 9000, 9, 500);
-        int highScore = calculateScoreReturned(gameOver, score, levelCompleted, bonus);
+        int highScore = calculateScore(score, levelCompleted, bonus);
         System.out.println("Your final score was: " + highScore);
     }
 }
