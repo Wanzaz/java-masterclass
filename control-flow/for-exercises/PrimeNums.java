@@ -16,6 +16,23 @@ public class PrimeNums {
 
         return true;
     }
+
+    public static void forLoopPrimeChecker() {
+
+        int counter = 0;
+        for (int i = 0; i <= 1000; i++) {
+            if (isPrime(i)) {
+                System.out.println(i + " number is PRIME");
+                counter++;
+                if (counter == 3) {
+                    System.out.println("Found 3 - Exiting for loop");
+                    break;
+                }
+            }
+            
+        }
+        
+    }
     
     public static void main(String[] args) {
 
@@ -28,6 +45,8 @@ public class PrimeNums {
         } else {
             System.out.println("Number " + number + " is NOT prime");
         }
+
+        forLoopPrimeChecker();
         
     }
 }
