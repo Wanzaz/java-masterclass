@@ -8,18 +8,13 @@ public class PrimeNums {
             return false;
         }
 
-        int dividers = 0;
-        for (int i = 2; i < number; i++) {
+        for (int i = 2; i <= number / 2; i++) {
             if (number % i == 0) {
-                dividers++;
+                return false;
             }
         }
 
-        if (dividers == 0) {
-            return true;
-        }
-
-        return false;
+        return true;
     }
     
     public static void main(String[] args) {
